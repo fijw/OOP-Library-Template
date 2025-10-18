@@ -16,7 +16,7 @@
 
 --[[ @section Types ]]
 type InputCallbackType = <T>(self: Test, input: T) -> (Test)
-type OutputCallbackType = <T>(self: Test) -> (Test)
+type OutputCallbackType = (self: Test) -> (Test)
 
 type UtilitiesSchema
 = {
@@ -70,8 +70,15 @@ local Test: TestSchema
 --[[ @end_section Variables ]]
 
 
+--[[
+    @NOTE: Section documentation, not function-specific.
+
+    Usage: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    param    input    <T>?
+    Return: Test
+]]
 --[[ @section Utilities ]]
-function Utilities:__call<T>(): (Test)
+function Utilities:__call(): (Test)
     print(self)
 
     return self
