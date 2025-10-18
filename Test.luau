@@ -74,7 +74,7 @@ local Test: TestSchema
     @NOTE: Section documentation, not function-specific.
 
     Usage: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    param    input    <T>?
+    param    input?    <T>
     Return: Test
 ]]
 --[[ @section Utilities ]]
