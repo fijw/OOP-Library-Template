@@ -1,5 +1,27 @@
 --[[
-    @Author: Bytegeist (@roblox_user_5618502527)
+    @Library:
+    ```
+         ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ 
+        |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+                                                                                                                 
+                                                                                                                 
+         _                                                                                                     _ 
+        | |       _____ _____ _____    __    _ _                      _____               _     _             | |
+        | |      |     |     |  _  |  |  |  |_| |_ ___ ___ ___ _ _   |_   _|___ _____ ___| |___| |_ ___       | |
+        | |      |  |  |  |  |   __|  |  |__| | . |  _| .'|  _| | |    | | | -_|     | . | | .'|  _| -_|      | |
+        | |      |_____|_____|__|     |_____|_|___|_| |__,|_| |_  |    |_| |___|_|_|_|  _|_|__,|_| |___|      | |
+        |_|                                                   |___|                  |_|                      |_|
+         _                                                                                                     _ 
+        | |                                   _        _          _____     _                                 | |
+        | |                       _____ ___ _| |___   | |_ _ _   |  |  |___|_|___ ___ ___                     | |
+        | |                      |     | .'| . | -_|  | . | | |  |    -| .'| |  _| . |_ -|                    | |
+        | |                      |_|_|_|__,|___|___|  |___|_  |  |__|__|__,|_|_| |___|___|                    | |
+        |_|                                               |___|                                               |_|
+                                                                                                                 
+                                                                                                                 
+         ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ 
+        |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+    ```
     
     @Description: This is a publicly released template I created recently
     @Description: for OOP libraries in Roblox.
@@ -61,19 +83,14 @@ type Test = setmetatable
 local Utilities = {} :: UtilitiesSchema
 local Constructor = {}
 
-local Test: TestSchema
-= {
-    a1 = "1a",
-    b2 = "2b",
-    c3 = "3c"
-}
+local Test = {}
 --[[ @end_section Variables ]]
 
 
 --[[
     @NOTE: Section documentation, not function-specific.
 
-    Usage: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    Usage: Lorem ipsum dolor sit amet.
     param    input?    <T>
     Return: Test
 ]]
@@ -116,7 +133,14 @@ end
     Return: Test
 ]]
 function Constructor:__call(): Test
-    local NewTest = setmetatable(Test,
+    local NewTest: Test
+    = setmetatable(
+        {
+            a1 = "1a",
+            b2 = "2b",
+            c3 = "3c"
+        } :: TestSchema,
+
         {
             __call = Utilities.__call,
 
